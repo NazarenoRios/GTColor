@@ -1,0 +1,152 @@
+.container2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* margin-top: 450px; */
+    /* margin: auto; */
+    margin-left: 44.5vw;
+    margin-top: 9vh;
+    max-width: 10%;
+}
+
+.container2 .card {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background-color: rgb(23, 23, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 .card .points {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.container2 .card .points svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.container2 .card .points svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px,5px);
+}
+
+.container2 .card .points svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+        /* 360deg / 100 = 3.6 */
+    }
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+
+    box-shadow: 0 0 10px var(--clr), 0 0 10px var(--clr);
+}
+
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.5s;
+}
+
+.number h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.number h2 span {
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.5em;
+}
+
+.number p {
+    font-size: 0.75em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+}
+
+#score {
+    font-size: 50px;
+}
+
+#p {
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.score-container {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 50px;
+}
+
+@media screen and (max-width: 1600px) {
+    .container2 {
+        margin-left: 44.5vw;
+        margin-top: 40vh;
+    }
+}

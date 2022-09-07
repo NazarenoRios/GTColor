@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- icon -->
+  <link rel="shortcut icon" href="media/icons/icon-color-2.jpg">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/points.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/cube.css">
+  <link rel="stylesheet" href="css/instructions.css">
+  <!-- Title -->
+  <title>GTColor</title>
+  
+</head>
+
+<body>
+
+  <h1 id="h1">The Great <br><br> <span id="colorDisplay"> </span> <br><br> Guessing Game</h1>
+
+  <div id="stripe">
+    <a id="reset2" style="--clr2:#0088ff"><span id="reset" type="reset">NEW COLORS</span><i></i></a>
+    <!-- <button id="reset" type="reset">NEW COLORS</button> -->
+    <span id="message"> </span>
+    <a style="--clr2:#04fc43" id="EASY" class="inputLevel"><span>EASY</span><i></i></a>
+    <a style="--clr2:#ff0000" id="HARD" class="inputLevel selected"><span>HARD</span><i></i></a>
+    <!-- <button id="EASY" class="inputLevel">EASY</button>
+    <button id="HARD" class="inputLevel selected">HARD</button> -->
+  </div>
+
+  <div class="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+
+  <div class="instructions">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+  
+  
+  <div class="cube">
+    <div class="top"></div>
+    <div>
+      <span style="--i:0"><h1>GUESS</h1></span>
+      <span style="--i:1"><h1>COLOR</h1></span>
+      <span style="--i:2"><h1>RGB</h1></span>
+      <span style="--i:3"><h1>THE</h1></span>
+    </div>
+  </div>
+
+  <div class="container2">
+    <div class="card">
+      <div class="points" style="--clr:#28ed59;--num:85">
+        <div class="dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+          <p class="score-container"><span id="score">0</span></p>
+          <p id="p">points</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
